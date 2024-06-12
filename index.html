@@ -19,7 +19,8 @@
         background-color: #fff; /* Couleur de fond */
       }
       .container {
-        width: 80%;
+        width: 90%;
+        max-width: 1200px;
         margin: auto;
         overflow: hidden;
       }
@@ -31,7 +32,8 @@
       }
       .banner {
         background-image: url("./images/7928152.png"); /* Remplacez avec votre image */
-        background-size: contain;
+        background-size: cover;
+        background-position: center;
         height: 300px;
         display: flex;
         justify-content: center;
@@ -41,6 +43,7 @@
       }
       nav {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         padding: 10px 0;
         background-color: var(--green-dark);
@@ -49,23 +52,24 @@
         color: #fff;
         text-decoration: none;
         padding: 10px 20px;
-        margin: 0 10px;
+        margin: 5px;
         background-color: var(--green-light);
         border-radius: 5px;
         transition: background-color 0.3s;
       }
-      nav a:hover {
+      nav a:hover, nav a:focus {
         background-color: var(--green-primary);
       }
       .cta {
+        font-weight: bolder;
         color: #fff;
-        background: var(--green-primary);
+        background-color: #ff7902;
         padding: 10px 20px;
         display: inline-block;
         border-radius: 5px;
         transition: background-color 0.3s;
       }
-      .cta:hover {
+      .cta:hover, .cta:focus {
         background: var(--green-dark);
       }
       .card-container {
@@ -77,13 +81,16 @@
         margin: 10px;
         padding: 20px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        width: calc(25% - 20px);
-        background-color: var(--green-light); /* Fond des cartes */
-        color: #333; /* Texte des cartes */
+        flex: 1;
+        min-width: 250px; /* Minimum width of a card */
+        max-width: calc(33.333% - 20px); /* Maximum width of a card */
+        background-color: var(--green-light);
+        color: #333;
         border-radius: 5px;
       }
       .card img {
-        width: 100%;
+        max-width: 100%;
+        height: auto;
         border-radius: 5px;
       }
       footer {
@@ -93,37 +100,34 @@
         padding: 10px;
         margin-top: 20px;
       }
-      .card h3 {
-        color: var(
-          --green-dark
-        ); /* Utilisez une teinte plus foncée de vert pour les titres des cartes */
+      @media (max-width: 768px) {
+        .card {
+          max-width: calc(50% - 20px);
+        }
       }
-
-      .card p {
-        font-size: 14px; /* Ajustez la taille de police si nécessaire */
+      @media (max-width: 480px) {
+        .card {
+          max-width: 100%;
+        }
+        nav a {
+          padding: 10px;
+          margin: 2px;
+          font-size: 14px;
+        }
       }
     </style>
   </head>
   <body>
     <header>
       <div class="banner">
-        <!-- <h1>Bienvenue sur Votre Application</h1>
-    <p>Changez votre quotidien avec notre solution</p> -->
+        <!-- Bannière peut contenir du texte ou être vide -->
       </div>
       <nav>
         <a href="#features">Fonctionnalités</a>
         <a href="#benefits">Avantages</a>
         <a href="#opportunities">Opportunités</a>
         <a href="#promotions">Promotions</a>
-        <a
-          href="#telecharger"
-          style="
-            font-weight: bolder;
-            color: rgb(255, 255, 255);
-            background-color: #ff7902;
-          "
-          > Télécharger Maintenant</a
-        >
+        <a href="#" class="cta">Télécharger Maintenant</a>
       </nav>
     </header>
 

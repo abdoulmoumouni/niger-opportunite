@@ -1,114 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Android App</title>
+<title>Votre Application</title>
 <style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  header, footer {
-    background: #333;
-    color: white;
-    padding: 1em 0;
-    text-align: center;
-  }
-  .content {
-    flex: 1;
-    padding: 2em;
-    text-align: center;
-  }
-  .app-title {
-    font-size: 2em;
-  }
-  .app-description {
-    margin: 1em 0;
-  }
-  .download-button {
-    background: #008CBA;
-    border: none;
-    padding: 1em 2em;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    color: white;
-  }
-  /* Features Section Styles */
-.features-section {
-  margin: 2em auto;
-  text-align: center;
-}
-
-.features {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px; /* Adjust the gap as needed */
-}
-
-.feature-item {
-  flex-basis: 30%; /* Adjust based on how many items per row you desire */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow around feature items */
-  padding: 1em;
-}
-
-.feature-item h3 {
-  margin-top: 0;
-}
-
-@media (max-width: 768px) {
-  .feature-item {
-    flex-basis: 100%; /* Stack items on smaller screens */
-  }
-}
+  body { font-family: Arial, sans-serif; line-height: 1.6; scroll-behavior: smooth; }
+  .container { width: 80%; margin: auto; overflow: hidden; }
+  header { background: #333; color: #fff; padding-top: 30px; min-height: 70px; border-bottom: #0779e4 3px solid; }
+  header a { color: #fff; text-decoration: none; text-transform: uppercase; font-size: 16px; }
+  main { padding: 20px; }
+  .cta { color: #333; background: #f4f4f4; padding: 10px 20px; display: inline-block; margin: 10px 0; }
+  footer { background: #333; color: #fff; text-align: center; padding: 10px; margin-top: 20px; }
+  .card-container { display: flex; flex-wrap: wrap; justify-content: space-around; }
+  .card { margin: 10px; padding: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.1); width: calc(25% - 20px); }
+  .card img { width: 100%; }
 </style>
 </head>
 <body>
 <header>
-  <h1 class="app-title">Your App Name</h1>
+  <div class="container">
+    <h1>Votre Application : Changez votre quotidien</h1>
+    <nav>
+      <a href="#features">Fonctionnalités</a> | 
+      <a href="#benefits">Avantages</a> | 
+      <a href="#opportunities">Opportunités</a> | 
+      <a href="#promotions">Promotions</a>
+    </nav>
+  </div>
 </header>
 
-<div class="content">
-  <p class="app-description">
-    Describe your app here. Highlight features, benefits, and anything that makes your app stand out.
-  </p>
-  <a href="https://github.com/abdoulmoumouni/niger-opportunite/releases/download/v1.0/app-release.apk" class="download-button">Download on the Play Store</a>
-</div>
-  <!-- Features Section -->
-<section class="features-section">
-  <h2>App Features</h2>
-  <div class="features">
-    <div class="feature-item">
-      <h3>Feature One</h3>
-      <p>Describe the first feature of your app here. Explain how it benefits the user.</p>
+<main class="container">
+  <section id="features">
+    <h2>Les Fonctionnalités de l’Application</h2>
+    <div class="card-container">
+      <!-- Ajoutez vos cartes ici -->
+      <!-- Exemple d'une carte -->
+      <div class="card">
+        <img src="chemin_vers_image_fonctionnalité.jpg" alt="Fonctionnalité 1">
+        <p>Description de la Fonctionnalité 1</p>
+      </div>
+      <!-- Répétez pour les autres cartes -->
     </div>
-    <div class="feature-item">
-      <h3>Feature Two</h3>
-      <p>Describe the second feature of your app here. Highlight its unique value proposition.</p>
+  </section>
+
+  <section id="benefits">
+    <h2>Les Avantages de l’Application</h2>
+    <div class="card-container">
+      <!-- Cartes d'avantages -->
     </div>
-    <div class="feature-item">
-      <h3>Feature Three</h3>
-      <p>Describe the third feature of your app. This could be a key selling point.</p>
+  </section>
+
+  <section id="opportunities">
+    <h2>Opportunités de Toucher un Grand Marché</h2>
+    <div class="card-container">
+      <!-- Cartes d'opportunités -->
     </div>
-    <!-- Add more features as needed -->
-  </div>
-</section>
+  </section>
+
+  <section id="promotions">
+    <h2>Opportunité de Profiter des Promotions</h2>
+    <div class="card-container">
+      <!-- Cartes de promotions -->
+    </div>
+  </section>
+
+  <a class="cta" href="#">Télécharger Maintenant</a>
+</main>
 
 <footer>
-  <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+  <p>Contactez-nous : info@votreapplication.com</p>
 </footer>
-
-<script>
-  // JavaScript can go here if needed
-</script>
 </body>
 </html>

@@ -5,29 +5,107 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Votre Application</title>
 <style>
-  body { font-family: Arial, sans-serif; line-height: 1.6; scroll-behavior: smooth; }
-  .container { width: 80%; margin: auto; overflow: hidden; }
-  header { background: #333; color: #fff; padding-top: 30px; min-height: 70px; border-bottom: #0779e4 3px solid; }
-  header a { color: #fff; text-decoration: none; text-transform: uppercase; font-size: 16px; }
-  main { padding: 20px; }
-  .cta { color: #333; background: #f4f4f4; padding: 10px 20px; display: inline-block; margin: 10px 0; }
-  footer { background: #333; color: #fff; text-align: center; padding: 10px; margin-top: 20px; }
-  .card-container { display: flex; flex-wrap: wrap; justify-content: space-around; }
-  .card { margin: 10px; padding: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.1); width: calc(25% - 20px); }
-  .card img { width: 100%; }
+  :root {
+    --green-primary: #4CAF50; /* Vert primaire */
+    --green-light: #81C784; /* Vert clair */
+    --green-dark: #388E3C; /* Vert foncé */
+  }
+  body { 
+    font-family: Arial, sans-serif; 
+    line-height: 1.6; 
+    scroll-behavior: smooth; 
+    color: #333; /* Couleur de texte principale */
+    background-color: #fff; /* Couleur de fond */
+  }
+  .container { 
+    width: 80%; 
+    margin: auto; 
+    overflow: hidden; 
+  }
+  header { 
+    position: relative; 
+    background-color: var(--green-primary); 
+    color: #fff; 
+    padding: 20px 0; 
+  }
+  .banner { 
+    background-image: url('chemin_vers_votre_image.jpg'); /* Remplacez avec votre image */
+    background-size: cover; 
+    height: 300px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    color: #fff; 
+    text-align: center; 
+  }
+  nav { 
+    display: flex; 
+    justify-content: center; 
+    padding: 10px 0; 
+    background-color: var(--green-dark); 
+  }
+  nav a { 
+    color: #fff; 
+    text-decoration: none; 
+    padding: 10px 20px; 
+    margin: 0 10px; 
+    background-color: var(--green-light); 
+    border-radius: 5px; 
+    transition: background-color 0.3s; 
+  }
+  nav a:hover { 
+    background-color: var(--green-primary); 
+  }
+  .cta { 
+    color: #fff; 
+    background: var(--green-primary); 
+    padding: 10px 20px; 
+    display: inline-block; 
+    border-radius: 5px; 
+    transition: background-color 0.3s; 
+  }
+  .cta:hover { 
+    background: var(--green-dark); 
+  }
+  .card-container { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+  }
+  .card { 
+    margin: 10px; 
+    padding: 20px; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+    width: calc(25% - 20px); 
+    background-color: var(--green-light); /* Fond des cartes */
+    color: #333; /* Texte des cartes */
+    border-radius: 5px; 
+  }
+  .card img { 
+    width: 100%; 
+    border-radius: 5px; 
+  }
+  footer { 
+    background: var(--green-dark); 
+    color: #fff; 
+    text-align: center; 
+    padding: 10px; 
+    margin-top: 20px; 
+  }
 </style>
 </head>
 <body>
 <header>
-  <div class="container">
-    <h1>Votre Application : Changez votre quotidien</h1>
-    <nav>
-      <a href="#features">Fonctionnalités</a> | 
-      <a href="#benefits">Avantages</a> | 
-      <a href="#opportunities">Opportunités</a> | 
-      <a href="#promotions">Promotions</a>
-    </nav>
+  <div class="banner">
+    <h1>Bienvenue sur Votre Application</h1>
+    <p>Changez votre quotidien avec notre solution</p>
   </div>
+  <nav>
+    <a href="#features">Fonctionnalités</a> 
+    <a href="#benefits">Avantages</a> 
+    <a href="#opportunities">Opportunités</a> 
+    <a href="#promotions">Promotions</a>
+  </nav>
 </header>
 
 <main class="container">

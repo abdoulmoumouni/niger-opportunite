@@ -1,153 +1,265 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Votre Application</title>
-<style>
-  :root {
-    --green-primary: #4CAF50; /* Vert primaire */
-    --green-light: #81C784; /* Vert clair */
-    --green-dark: #388E3C; /* Vert foncé */
-  }
-  body { 
-    font-family: Arial, sans-serif; 
-    line-height: 1.6; 
-    scroll-behavior: smooth; 
-    color: #333; /* Couleur de texte principale */
-    background-color: #fff; /* Couleur de fond */
-  }
-  .container { 
-    width: 80%; 
-    margin: auto; 
-    overflow: hidden; 
-  }
-  header { 
-    position: relative; 
-    background-color: var(--green-primary); 
-    color: #fff; 
-    padding: 20px 0; 
-  }
-  .banner { 
-    background-image: url('chemin_vers_votre_image.jpg'); /* Remplacez avec votre image */
-    background-size: cover; 
-    height: 300px; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    color: #fff; 
-    text-align: center; 
-  }
-  nav { 
-    display: flex; 
-    justify-content: center; 
-    padding: 10px 0; 
-    background-color: var(--green-dark); 
-  }
-  nav a { 
-    color: #fff; 
-    text-decoration: none; 
-    padding: 10px 20px; 
-    margin: 0 10px; 
-    background-color: var(--green-light); 
-    border-radius: 5px; 
-    transition: background-color 0.3s; 
-  }
-  nav a:hover { 
-    background-color: var(--green-primary); 
-  }
-  .cta { 
-    color: #fff; 
-    background: var(--green-primary); 
-    padding: 10px 20px; 
-    display: inline-block; 
-    border-radius: 5px; 
-    transition: background-color 0.3s; 
-  }
-  .cta:hover { 
-    background: var(--green-dark); 
-  }
-  .card-container { 
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: space-around; 
-  }
-  .card { 
-    margin: 10px; 
-    padding: 20px; 
-    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
-    width: calc(25% - 20px); 
-    background-color: var(--green-light); /* Fond des cartes */
-    color: #333; /* Texte des cartes */
-    border-radius: 5px; 
-  }
-  .card img { 
-    width: 100%; 
-    border-radius: 5px; 
-  }
-  footer { 
-    background: var(--green-dark); 
-    color: #fff; 
-    text-align: center; 
-    padding: 10px; 
-    margin-top: 20px; 
-  }
-</style>
-</head>
-<body>
-<header>
-  <div class="banner">
-    <h1>Bienvenue sur Votre Application</h1>
-    <p>Changez votre quotidien avec notre solution</p>
-  </div>
-  <nav>
-    <a href="#features">Fonctionnalités</a> 
-    <a href="#benefits">Avantages</a> 
-    <a href="#opportunities">Opportunités</a> 
-    <a href="#promotions">Promotions</a>
-  </nav>
-</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/logonoapk.png" type="image/x-icon" sizes="16x16">
+    <title>Niger Opportunité</title>
+    <style>
+      :root {
+        --green-primary: #4caf50; /* Vert primaire */
+        --green-light: #81c784; /* Vert clair */
+        --green-dark: #388e3c; /* Vert foncé */
+      }
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        scroll-behavior: smooth;
+        color: #333; /* Couleur de texte principale */
+        background-color: #fff; /* Couleur de fond */
+      }
+      .container {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+      }
+      header {
+        position: relative;
+        background-color: var(--green-primary);
+        color: #fff;
+        padding: 20px 0;
+      }
+      .banner {
+        background-image: url("./images/7928152.png"); /* Remplacez avec votre image */
+        background-size: contain;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--green-primary);
+        text-align: center;
+      }
+      nav {
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+        background-color: var(--green-dark);
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 0 10px;
+        background-color: var(--green-light);
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+      nav a:hover {
+        background-color: var(--green-primary);
+      }
+      .cta {
+        color: #fff;
+        background: var(--green-primary);
+        padding: 10px 20px;
+        display: inline-block;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+      .cta:hover {
+        background: var(--green-dark);
+      }
+      .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      .card {
+        margin: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: calc(25% - 20px);
+        background-color: var(--green-light); /* Fond des cartes */
+        color: #333; /* Texte des cartes */
+        border-radius: 5px;
+      }
+      .card img {
+        width: 100%;
+        border-radius: 5px;
+      }
+      footer {
+        background: var(--green-dark);
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        margin-top: 20px;
+      }
+      .card h3 {
+        color: var(
+          --green-dark
+        ); /* Utilisez une teinte plus foncée de vert pour les titres des cartes */
+      }
 
-<main class="container">
-  <section id="features">
-    <h2>Les Fonctionnalités de l’Application</h2>
-    <div class="card-container">
-      <!-- Ajoutez vos cartes ici -->
-      <!-- Exemple d'une carte -->
-      <div class="card">
-        <img src="chemin_vers_image_fonctionnalité.jpg" alt="Fonctionnalité 1">
-        <p>Description de la Fonctionnalité 1</p>
+      .card p {
+        font-size: 14px; /* Ajustez la taille de police si nécessaire */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="banner">
+        <!-- <h1>Bienvenue sur Votre Application</h1>
+    <p>Changez votre quotidien avec notre solution</p> -->
       </div>
-      <!-- Répétez pour les autres cartes -->
-    </div>
-  </section>
+      <nav>
+        <a href="#features">Fonctionnalités</a>
+        <a href="#benefits">Avantages</a>
+        <a href="#opportunities">Opportunités</a>
+        <a href="#promotions">Promotions</a>
+        <a
+          href="#telecharger"
+          style="
+            font-weight: bolder;
+            color: rgb(255, 255, 255);
+            background-color: #ff7902;
+          "
+          > Télécharger Maintenant</a
+        >
+      </nav>
+    </header>
 
-  <section id="benefits">
-    <h2>Les Avantages de l’Application</h2>
-    <div class="card-container">
-      <!-- Cartes d'avantages -->
-    </div>
-  </section>
+    <main class="container">
+      <section id="features">
+        <h2>Les Fonctionnalités de l’Application</h2>
+        <div class="card-container">
+          <!-- Ajoutez vos cartes ici -->
+          <!-- Exemple d'une carte -->
+          <div class="card">
+            <img
+              src="./images/Screenshot_20240511_154154_com-portrait.png"
+              alt="Fonctionnalité 1"
+            />
+            <p>Découvrez toutes les opportunités d'emplois</p>
+          </div>
+          <div class="card">
+            <img
+              src="./images/Screenshot_20240511_154237_com-portrait.png"
+              alt="Fonctionnalité 1"
+            />
+            <p>
+              Découvrez toutes les opportunités de Deals pour faire les bonnes
+              affaires
+            </p>
+          </div>
+          <div class="card">
+            <img
+              src="./images/Screenshot_20240511_200152_com-portrait.png"
+              alt="Fonctionnalité 1"
+            />
+            <p>Un design soignez pour une meilleure expérience utilisateur</p>
+          </div>
+          <!-- Répétez pour les autres cartes -->
+        </div>
+      </section>
 
-  <section id="opportunities">
-    <h2>Opportunités de Toucher un Grand Marché</h2>
-    <div class="card-container">
-      <!-- Cartes d'opportunités -->
-    </div>
-  </section>
+      <section id="benefits">
+        <!-- Section Avantages -->
+        <section id="benefits">
+          <h2>Les Avantages qu’offre l’Application</h2>
+          <div class="card-container">
+            <div class="card">
+              <h3>Accessibilité simplifiée</h3>
+              <p>
+                Grâce à notre interface mobile intuitive, trouvez ou publiez des
+                offres d'emploi où que vous soyez.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Affiliation innovante</h3>
+              <p>
+                Publiez gratuitement en rejoignant notre programme d'affiliation
+                et commencez à gagner des commissions dès maintenant.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Visibilité optimisée</h3>
+              <p>
+                Bénéficiez d'une diffusion de vos annonces sur toute l'étendue
+                du territoire.
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
 
-  <section id="promotions">
-    <h2>Opportunité de Profiter des Promotions</h2>
-    <div class="card-container">
-      <!-- Cartes de promotions -->
-    </div>
-  </section>
+      <section id="opportunities">
+        <!-- Section Opportunités -->
+        <section id="opportunities">
+          <h2>
+            Opportunités de Toucher un Grand Marché de Clients pour vos Produits
+            et Services
+          </h2>
+          <div class="card-container">
+            <div class="card">
+              <h3>Augmentez votre visibilité</h3>
+              <p>
+                Notre application est conçue pour maximiser l'exposition de vos
+                offres à une audience vaste et diversifiée.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Ciblez efficacement</h3>
+              <p>
+                Utilisez nos outils de ciblage pour atteindre les clients les
+                plus susceptibles de s’intéresser à ce que vous offrez.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Boostez vos ventes</h3>
+              <p>
+                Profitez de notre infrastructure marketing pour transformer
+                chaque visite en une opportunité de vente.
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
 
-  <a class="cta" href="#">Télécharger Maintenant</a>
-</main>
+      <section id="promotions">
+        <!-- Section Promotions -->
+        <section id="promotions">
+          <h2>
+            Opportunité de Profiter des Produits et Services en Promotion ou
+            Gratuits Partout au Niger
+          </h2>
+          <div class="card-container">
+            <div class="card">
+              <h3>Promotions exclusives</h3>
+              <p>
+                Trouvez les meilleures offres et réductions sur une large gamme
+                de produits et services.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Accès facile et rapide</h3>
+              <p>
+                Parcourez et trouvez rapidement les offres qui vous intéressent
+                grâce à notre interface utilisateur optimisée.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Économies substantielles</h3>
+              <p>
+                Profitez de produits et services à prix réduits sans compromis
+                sur la qualité.
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
 
-<footer>
-  <p>Contactez-nous : info@votreapplication.com</p>
-</footer>
-</body>
+    <footer>
+      <p>Contactez-nous : bnic.contacts@gmail.com ; +227 93 30 03 20</p>
+    </footer>
+  </body>
 </html>

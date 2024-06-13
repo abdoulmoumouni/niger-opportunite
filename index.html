@@ -317,5 +317,24 @@
     <footer>
       <p>Contactez-nous : bnic.contacts@gmail.com ; +227 93 30 03 20</p>
     </footer>
+   <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const detailsElements = document.querySelectorAll("details");
+
+        detailsElements.forEach(details => {
+            details.addEventListener("toggle", function() {
+                if (details.open) {
+                    sessionStorage.setItem(details.querySelector("summary").textContent, "open");
+                } else {
+                    sessionStorage.removeItem(details.querySelector("summary").textContent);
+                }
+            });
+
+            if (sessionStorage.getItem(details.querySelector("summary").textContent) === "open") {
+                details.open = true;
+            }
+        });
+    });
+</script>
   </body>
 </html>

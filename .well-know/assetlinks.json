@@ -1,0 +1,12 @@
+[
+    {
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.bnic.nigerOpportunite",
+        "sha256_cert_fingerprints": [
+          "3B:8E:D7:16:BA:90:B3:41:75:51:C3:F8:C3:86:30:E2:D1:60:4E:4C:32:16:F8:40:1C:19:35:9D:D3:EF:FF:64"
+        ]
+      }
+    }
+  ]

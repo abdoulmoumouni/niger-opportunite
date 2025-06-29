@@ -31,17 +31,33 @@
         padding: 20px 0;
       }
       .banner {
-        background-image: url("./images/7928152.png"); /* Remplacez avec votre image */
-        background-size: cover;
-        background-position: center;
-        width: 100%;
-        height: 300px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: var(--green-primary);
-        text-align: center;
-      }
+         background-image: url("./images/7928152.png"); /* Image de fond */
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         width: 100%;
+         height: 40vh; /* Hauteur relative à la taille de l’écran */
+         min-height: 200px; /* Hauteur minimum */
+         max-height: 400px; /* Hauteur maximale */
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         color: var(--green-primary);
+         text-align: center;
+         padding: 10px;
+         box-sizing: border-box;
+       }
+       
+       /* Pour très petits écrans */
+       @media (max-width: 480px) {
+         .banner {
+           height: 25vh;
+           min-height: 150px;
+           font-size: 14px;
+           padding: 5px;
+         }
+       }
+
       nav {
         display: flex;
         flex-wrap: wrap;

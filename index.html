@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
@@ -7,38 +7,47 @@
     <title>Niger Opportunité</title>
     <style>
       :root {
-        --green-primary: #4caf50; /* Vert primaire */
-        --green-light: #81c784; /* Vert clair */
-        --green-dark: #388e3c; /* Vert foncé */
+        --green-primary: #4caf50;
+        --green-light: #81c784;
+        --green-dark: #388e3c;
+      }
+      html {
+        box-sizing: border-box;
+        font-size: 16px;
+      }
+      *, *:before, *:after {
+        box-sizing: inherit;
       }
       body {
         font-family: Arial, sans-serif;
         line-height: 1.6;
         scroll-behavior: smooth;
-        color: #333; /* Couleur de texte principale */
-        background-color: #fff; /* Couleur de fond */
+        color: #333;
+        background-color: #fff;
+        margin: 0;
+        padding: 0;
       }
       .container {
         width: 90%;
         max-width: 1200px;
         margin: auto;
-        overflow: hidden;
+        padding: 0 1rem;
       }
       header {
         position: relative;
         background-color: var(--green-primary);
         color: #fff;
-        padding: 20px 0;
+        padding: 1.25rem 0;
       }
       .banner {
-         background-image: url("./images/7928152.png"); /* Image de fond */
+         background-image: url("./images/7928152.png");
          background-size: cover;
          background-position: center;
          background-repeat: no-repeat;
          width: 100%;
-         height: 40vh; /* Hauteur relative à la taille de l’écran */
-         min-height: 200px; /* Hauteur minimum */
-         max-height: 400px; /* Hauteur maximale */
+         height: 40vh;
+         min-height: 200px;
+         max-height: 400px;
          display: flex;
          justify-content: center;
          align-items: center;
@@ -47,32 +56,23 @@
          padding: 10px;
          box-sizing: border-box;
        }
-       
-       /* Pour très petits écrans */
-       @media (max-width: 480px) {
-         .banner {
-           height: 25vh;
-           min-height: 150px;
-           font-size: 14px;
-           padding: 5px;
-         }
-       }
-
       nav {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        padding: 10px 0;
+        padding: 0.75rem 0;
         background-color: var(--green-dark);
+        gap: 0.5rem;
       }
       nav a {
         color: #fff;
         text-decoration: none;
-        padding: 10px 20px;
-        margin: 5px;
+        padding: 0.625rem 1rem;
         background-color: var(--green-light);
-        border-radius: 5px;
+        border-radius: 0.313rem;
         transition: background-color 0.3s;
+        font-size: 1rem;
+        margin: 0;
       }
       nav a:hover, nav a:focus {
         background-color: var(--green-primary);
@@ -81,9 +81,9 @@
         font-weight: bolder;
         color: #fff;
         background-color: #ff7902;
-        padding: 10px 20px;
+        padding: 0.625rem 1rem;
         display: inline-block;
-        border-radius: 5px;
+        border-radius: 0.313rem;
         transition: background-color 0.3s;
       }
       .cta:hover, .cta:focus {
@@ -92,65 +92,99 @@
       .card-container {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-between;
+        gap: 1rem;
       }
       .card {
-        margin: 10px;
-        padding: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        flex: 1;
-        min-width: 250px; /* Minimum width of a card */
-        max-width: calc(33.333% - 20px); /* Maximum width of a card */
+        margin: 0;
+        padding: 1.25rem;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        flex: 1 1 300px;
+        min-width: 220px;
+        max-width: 32%;
         background-color: var(--green-light);
         color: #333;
-        border-radius: 5px;
+        border-radius: 0.313rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
       .card img {
         max-width: 100%;
         height: auto;
-        border-radius: 5px;
+        border-radius: 0.313rem;
+        margin-bottom: 0.5rem;
       }
       footer {
         background: var(--green-dark);
         color: #fff;
         text-align: center;
-        padding: 10px;
-        margin-top: 20px;
+        padding: 0.625rem;
+        margin-top: 1.25rem;
+        font-size: 1rem;
+      }
+      details {
+        margin: 0.625rem 0;
+        padding: 0.625rem;
+        border: 1px solid #ccc;
+        border-radius: 0.313rem;
+      }
+      summary {
+        font-weight: bold;
+        cursor: pointer;
+        color: #6200ee;
+      }
+      summary:hover {
+        color: #3700b3;
+      }
+      ul {
+        margin: 0.625rem 0;
+        padding-left: 1.25rem;
+        list-style-type: disc;
+      }
+      /* Responsive breakpoints */
+      @media (max-width: 1024px) {
+        .container {
+          width: 98%;
+          padding: 0 0.5rem;
+        }
+        .card {
+          max-width: 48%;
+        }
       }
       @media (max-width: 768px) {
+        nav {
+          flex-direction: column;
+          align-items: stretch;
+          gap: 0.25rem;
+        }
+        .card-container {
+          flex-direction: column;
+          gap: 1rem;
+        }
         .card {
-          max-width: calc(50% - 20px);
+          max-width: 100%;
+          min-width: 0;
         }
       }
       @media (max-width: 480px) {
-        .card {
-          max-width: 100%;
+        .banner {
+          height: 20vh;
+          min-height: 80px;
+          font-size: 0.9rem;
+          padding: 0.25rem;
         }
         nav a {
-          padding: 10px;
-          margin: 2px;
-          font-size: 14px;
+          padding: 0.5rem;
+          font-size: 0.95rem;
+        }
+        .card {
+          padding: 0.75rem;
+        }
+        footer {
+          font-size: 0.95rem;
         }
       }
-     details {
-            margin: 10px 0;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        summary {
-            font-weight: bold;
-            cursor: pointer;
-            color: #6200ee;
-        }
-        summary:hover {
-            color: #3700b3;
-        }
-        ul {
-            margin: 10px 0;
-            padding-left: 20px;
-            list-style-type: disc;
-        }
     </style>
   </head>
   <body>
@@ -164,192 +198,110 @@
         <a href="#opportunities">Opportunités</a>
         <a href="#promotions">Promotions</a>
         <a href="https://deploygate.com/organizations/Abdoulmoumouni/platforms/android/apps/com.example.emploisniger?from_qr=1" class="cta">Télécharger Maintenant</a>
-       <a href="https://chat.whatsapp.com/CkO9CqwY1ygJ51CxYqVD58">Intégrer le Groupe WhastApp</a>
+        <a href="https://chat.whatsapp.com/CkO9CqwY1ygJ51CxYqVD58">Intégrer le Groupe WhastApp</a>
       </nav>
     </header>
-
     <main class="container">
-     <section id="updates">
+      <section id="updates">
         <h2>Historiques des mises à jours de l'applications</h2>
         <div class="card-container">
           <details>
-              <summary> ✅ Lancement officiel de l'Application version 1.0 à la date de Jeudi 13 Juin 2024</summary>
-              <ul>
-                  <li> Vous avez la possibilité de faire publier votre offre, produit ou service pour une durée d'une semaine</li>
-                  <li>Contacter nous sur whatsapp via ce numéro : 93300320 </li>
-              </ul>
-              <!--<details>
-                  <summary>Application Updates for May 2024</summary>
-                  <ul>
-                      <li>Added dark mode</li>
-                      <li>Enhanced security features</li>
-                      <li>Minor bug fixes</li>
-                  </ul>
-                  <details>
-                      <summary>Application Updates for April 2024</summary>
-                      <ul>
-                          <li>Introduced analytics dashboard</li>
-                          <li>Optimized database queries</li>
-                          <li>Resolved issues with push notifications</li>
-                      </ul>
-                  </details>-->
-              </details>
+            <summary>✅ Lancement officiel de l'Application version 1.0 à la date de Jeudi 13 Juin 2024</summary>
+            <ul>
+              <li>Vous avez la possibilité de faire publier votre offre, produit ou service pour une durée d'une semaine</li>
+              <li>Contactez-nous sur whatsapp via ce numéro : 93300320</li>
+            </ul>
           </details>
-          
         </div>
       </section>
-     
       <section id="features">
         <h2>Les Fonctionnalités de l’Application</h2>
         <div class="card-container">
-          <!-- Ajoutez vos cartes ici -->
-          <!-- Exemple d'une carte -->
           <div class="card">
-            <img
-              src="./images/Screenshot_20240511_154154_com-portrait.png"
-              alt="Fonctionnalité 1"
-            />
+            <img src="./images/Screenshot_20240511_154154_com-portrait.png" alt="Fonctionnalité 1"/>
             <p>Découvrez toutes les opportunités d'emplois</p>
           </div>
           <div class="card">
-            <img
-              src="./images/Screenshot_20240511_154237_com-portrait.png"
-              alt="Fonctionnalité 1"
-            />
-            <p>
-              Découvrez toutes les opportunités de Deals pour faire les bonnes
-              affaires
-            </p>
+            <img src="./images/Screenshot_20240511_154237_com-portrait.png" alt="Fonctionnalité 2"/>
+            <p>Découvrez toutes les opportunités de Deals pour faire les bonnes affaires</p>
           </div>
           <div class="card">
-            <img
-              src="./images/Screenshot_20240511_200152_com-portrait.png"
-              alt="Fonctionnalité 1"
-            />
-            <p>Un design soignez pour une meilleure expérience utilisateur</p>
+            <img src="./images/Screenshot_20240511_200152_com-portrait.png" alt="Fonctionnalité 3"/>
+            <p>Un design soigné pour une meilleure expérience utilisateur</p>
           </div>
-          <!-- Répétez pour les autres cartes -->
         </div>
       </section>
-
       <section id="benefits">
-        <!-- Section Avantages -->
-        <section id="benefits">
-          <h2>Les Avantages qu’offre l’Application</h2>
-          <div class="card-container">
-            <div class="card">
-              <h3>Accessibilité simplifiée</h3>
-              <p>
-                Grâce à notre interface mobile intuitive, trouvez ou publiez des
-                offres d'emploi où que vous soyez.
-              </p>
-            </div>
-            <div class="card">
-              <h3>Affiliation innovante</h3>
-              <p>
-                Publiez gratuitement en rejoignant notre programme d'affiliation
-                et commencez à gagner des commissions dès maintenant.
-              </p>
-            </div>
-            <div class="card">
-              <h3>Visibilité optimisée</h3>
-              <p>
-                Bénéficiez d'une diffusion de vos annonces sur toute l'étendue
-                du territoire.
-              </p>
-            </div>
+        <h2>Les Avantages qu’offre l’Application</h2>
+        <div class="card-container">
+          <div class="card">
+            <h3>Accessibilité simplifiée</h3>
+            <p>Grâce à notre interface mobile intuitive, trouvez ou publiez des offres d'emploi où que vous soyez.</p>
           </div>
-        </section>
+          <div class="card">
+            <h3>Affiliation innovante</h3>
+            <p>Publiez gratuitement en rejoignant notre programme d'affiliation et commencez à gagner des commissions dès maintenant.</p>
+          </div>
+          <div class="card">
+            <h3>Visibilité optimisée</h3>
+            <p>Bénéficiez d'une diffusion de vos annonces sur toute l'étendue du territoire.</p>
+          </div>
+        </div>
       </section>
-
       <section id="opportunities">
-        <!-- Section Opportunités -->
-        <section id="opportunities">
-          <h2>
-            Opportunités de Toucher un Grand Marché de Clients pour vos Produits
-            et Services
-          </h2>
-          <div class="card-container">
-            <div class="card">
-              <h3>Augmentez votre visibilité</h3>
-              <p>
-                Notre application est conçue pour maximiser l'exposition de vos
-                offres à une audience vaste et diversifiée.
-              </p>
-            </div>
-            <div class="card">
-              <h3>Ciblez efficacement</h3>
-              <p>
-                Utilisez nos outils de ciblage pour atteindre les clients les
-                plus susceptibles de s’intéresser à ce que vous offrez.
-              </p>
-            </div>
-            <div class="card">
-              <h3>Boostez vos ventes</h3>
-              <p>
-                Profitez de notre infrastructure marketing pour transformer
-                chaque visite en une opportunité de vente.
-              </p>
-            </div>
+        <h2>Opportunités de Toucher un Grand Marché de Clients pour vos Produits et Services</h2>
+        <div class="card-container">
+          <div class="card">
+            <h3>Augmentez votre visibilité</h3>
+            <p>Notre application est conçue pour maximiser l'exposition de vos offres à une audience vaste et diversifiée.</p>
           </div>
-        </section>
+          <div class="card">
+            <h3>Ciblez efficacement</h3>
+            <p>Utilisez nos outils de ciblage pour atteindre les clients les plus susceptibles de s’intéresser à ce que vous offrez.</p>
+          </div>
+          <div class="card">
+            <h3>Boostez vos ventes</h3>
+            <p>Profitez de notre infrastructure marketing pour transformer chaque visite en une opportunité de vente.</p>
+          </div>
+        </div>
       </section>
-
       <section id="promotions">
-        <!-- Section Promotions -->
-        <section id="promotions">
-          <h2>
-            Opportunité de Profiter des Produits et Services en Promotion ou
-            Gratuits Partout au Niger
-          </h2>
-          <div class="card-container">
-            <div class="card">
-              <h3>Promotions exclusives</h3>
-              <p>
-                Trouvez les meilleures offres et réductions sur une large gamme
-                de produits et services.
-              </p>
-            </div>
-            <div class="card">
-              <h3>Accès facile et rapide</h3>
-              <p>
-                Parcourez et trouvez rapidement les offres qui vous intéressent
-                grâce à notre interface utilisateur optimisée.
-              </p>
-            </div>
-            <div class="card">
-              <h3>Économies substantielles</h3>
-              <p>
-                Profitez de produits et services à prix réduits sans compromis
-                sur la qualité.
-              </p>
-            </div>
+        <h2>Opportunité de Profiter des Produits et Services en Promotion ou Gratuits Partout au Niger</h2>
+        <div class="card-container">
+          <div class="card">
+            <h3>Promotions exclusives</h3>
+            <p>Trouvez les meilleures offres et réductions sur une large gamme de produits et services.</p>
           </div>
-        </section>
+          <div class="card">
+            <h3>Accès facile et rapide</h3>
+            <p>Parcourez et trouvez rapidement les offres qui vous intéressent grâce à notre interface utilisateur optimisée.</p>
+          </div>
+          <div class="card">
+            <h3>Économies substantielles</h3>
+            <p>Profitez de produits et services à prix réduits sans compromis sur la qualité.</p>
+          </div>
+        </div>
       </section>
     </main>
-
     <footer>
       <p>Contactez-nous : bnic.contacts@gmail.com ; +227 93 30 03 20</p>
     </footer>
-   <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
         const detailsElements = document.querySelectorAll("details");
-
         detailsElements.forEach(details => {
-            details.addEventListener("toggle", function() {
-                if (details.open) {
-                    sessionStorage.setItem(details.querySelector("summary").textContent, "open");
-                } else {
-                    sessionStorage.removeItem(details.querySelector("summary").textContent);
-                }
-            });
-
-            if (sessionStorage.getItem(details.querySelector("summary").textContent) === "open") {
-                details.open = true;
+          details.addEventListener("toggle", function() {
+            if (details.open) {
+              sessionStorage.setItem(details.querySelector("summary").textContent, "open");
+            } else {
+              sessionStorage.removeItem(details.querySelector("summary").textContent);
             }
+          });
+          if (sessionStorage.getItem(details.querySelector("summary").textContent) === "open") {
+            details.open = true;
+          }
         });
-    });
-</script>
+      });
+    </script>
   </body>
 </html>

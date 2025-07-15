@@ -185,33 +185,6 @@
           font-size: 0.95rem;
         }
       }
-      @media (max-width: 768px) {
-        #hamburger {
-          display: block;
-          background: var(--green-dark);
-          color: #fff;
-          border: none;
-          font-size: 2rem;
-          margin: 0.5rem;
-          border-radius: 0.313rem;
-          cursor: pointer;
-          align-self: flex-end;
-        }
-        #nav-links {
-          display: none;
-          flex-direction: column;
-          gap: 0.25rem;
-          width: 100%;
-        }
-        #nav-links.show {
-          display: flex;
-        }
-      }
-      nav {
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-      }
     </style>
   </head>
   <body>
@@ -219,10 +192,6 @@
       <div class="banner">
         <!-- Bannière peut contenir du texte ou être vide -->
       </div>
-      <!-- Hamburger menu button -->
-      <button id="hamburger" aria-label="Menu" style="display:none;">
-        &#9776;
-      </button>
       <div id="nav-links">
         <a href="#features">Fonctionnalités</a>
         <a href="#benefits">Avantages</a>
@@ -333,13 +302,6 @@
           if (sessionStorage.getItem(details.querySelector("summary").textContent) === "open") {
             details.open = true;
           }
-        });
-
-        // Hamburger menu functionality
-        const hamburger = document.getElementById("hamburger");
-        const navLinks = document.getElementById("nav-links");
-        hamburger.addEventListener("click", function() {
-          navLinks.classList.toggle("show");
         });
 
         // Back to top button functionality

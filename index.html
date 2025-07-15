@@ -185,6 +185,33 @@
           font-size: 0.95rem;
         }
       }
+      @media (max-width: 768px) {
+        #hamburger {
+          display: block;
+          background: var(--green-dark);
+          color: #fff;
+          border: none;
+          font-size: 2rem;
+          margin: 0.5rem;
+          border-radius: 0.313rem;
+          cursor: pointer;
+          align-self: flex-end;
+        }
+        #nav-links {
+          display: none;
+          flex-direction: column;
+          gap: 0.25rem;
+          width: 100%;
+        }
+        #nav-links.show {
+          display: flex;
+        }
+      }
+      nav {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
     </style>
   </head>
   <body>
@@ -192,14 +219,18 @@
       <div class="banner">
         <!-- Bannière peut contenir du texte ou être vide -->
       </div>
-      <nav>
+      <!-- Hamburger menu button -->
+      <button id="hamburger" aria-label="Menu" style="display:none;">
+        &#9776;
+      </button>
+      <div id="nav-links">
         <a href="#features">Fonctionnalités</a>
         <a href="#benefits">Avantages</a>
         <a href="#opportunities">Opportunités</a>
         <a href="#promotions">Promotions</a>
         <a href="https://github.com/abdoulmoumouni/niger-opportunite/releases/download/V1.0.1/nigeropportunite_v1_0_1.apk" class="cta">Télécharger Maintenant</a>
         <a href="https://chat.whatsapp.com/CkO9CqwY1ygJ51CxYqVD58">Intégrer le Groupe WhastApp</a>
-      </nav>
+      </div>
     </header>
     <main class="container">
       <section id="updates">
@@ -303,7 +334,30 @@
             details.open = true;
           }
         });
+
+        // Hamburger menu functionality
+        const hamburger = document.getElementById("hamburger");
+        const navLinks = document.getElementById("nav-links");
+        hamburger.addEventListener("click", function() {
+          navLinks.classList.toggle("show");
+        });
+
+        // Back to top button functionality
+        const backToTop = document.getElementById("back-to-top");
+        window.addEventListener("scroll", function() {
+          if (window.scrollY > 300) {
+            backToTop.style.display = "block";
+          } else {
+            backToTop.style.display = "none";
+          }
+        });
+        backToTop.addEventListener("click", function() {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
       });
     </script>
+    <button id="back-to-top" style="display:none;position:fixed;bottom:20px;right:20px;padding:0.75rem 1.25rem;background:var(--green-primary);color:#fff;border:none;border-radius:0.313rem;cursor:pointer;z-index:2000;">
+      ↑ Haut
+    </button>
   </body>
 </html>
